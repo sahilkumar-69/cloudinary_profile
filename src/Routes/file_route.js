@@ -3,6 +3,8 @@ import { Router } from "express";
 import { upload } from "../middleware/multer_upload.js";
 import {
   delete_record,
+  deleteProfile,
+  updateProfile,
   upload_file,
   upload_profileData,
 } from "../controller/fileController.js";
@@ -19,6 +21,10 @@ router
     upload_profileData
   );
 
-// router.route("login").get(user_login)
+router.route("/deleteprofile").get(deleteProfile)
+
+router.route("/updateprofile").post(upload.single("avatar"),updateProfile)
 
 export default router;
+
+

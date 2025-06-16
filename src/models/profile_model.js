@@ -14,6 +14,10 @@ const profile_schema = Schema({
     type: String,
     require: true,
   },
+  avatar_public_id: String,
+  pdf_public_id: String,
+  video_public_id: String,
+  image_public_id: String,
   pdf_url: {
     type: String,
     require: true,
